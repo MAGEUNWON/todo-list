@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   MdCheckBoxOutlineBlank,
   MdCheckBox,
@@ -23,4 +24,5 @@ const TodoListItem = ({todo, onRemove, onToggle})=> {
   );
 };
 
-export default TodoListItem;
+//React.memo를 사용해서 컴포넌트의 props가 바뀌지 않았다며, 리렌더링하지 않도록 설정해줌
+export default React.memo(TodoListItem);
